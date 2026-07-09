@@ -1,0 +1,14 @@
+# RAG-PDLC Requirements
+# Note: If using Python 3.13, pdfplumber and some dependencies have limited support.
+# Recommend using Python 3.11 instead.
+
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.12
+pdfplumber>=0.10.3
+python-dotenv>=1.0.1
+sentence-transformers>=3.0.1
+numpy>=1.26.0
+torch>=2.3.0
+qdrant-client>=1.18.0
+anthropic>=0.34.0

@@ -1,0 +1,86 @@
+version: 1
+generated_at: 2026-07-09
+team_size: 1
+
+shared_files:
+  - requirements.txt          # Common dependencies for all stories
+  - config.py                # Configuration (Qdrant, LLM, embedding model settings)
+
+stories:
+  - id: "1.1"
+    title: PDF Upload & Text Extraction
+    jira: LOCAL
+    wave: 1
+    requires: []
+    enables: ["1.2"]
+
+  - id: "1.2"
+    title: Text Chunking & Vector Embedding Generation
+    jira: LOCAL
+    wave: 2
+    requires: ["1.1"]
+    enables: ["1.3"]
+
+  - id: "1.3"
+    title: Qdrant Integration & Vector Storage
+    jira: LOCAL
+    wave: 3
+    requires: ["1.2"]
+    enables: ["1.4"]
+
+  - id: "1.4"
+    title: RAG Retrieval & Context Search
+    jira: LOCAL
+    wave: 4
+    requires: ["1.3"]
+    enables: ["1.5"]
+
+  - id: "1.5"
+    title: LLM-Based Answer Generation with Citations
+    jira: LOCAL
+    wave: 5
+    requires: ["1.4"]
+    enables: ["1.6"]
+
+  - id: "1.6"
+    title: Web Interface — PDF Upload & Chat UI
+    jira: LOCAL
+    wave: 6
+    requires: ["1.5"]
+    enables: ["1.7"]
+
+  - id: "1.7"
+    title: API Integration & End-to-End Testing
+    jira: LOCAL
+    wave: 7
+    requires: ["1.6"]
+    enables: []
+
+waves:
+  - wave: 1
+    stories: ["1.1"]
+    note: "PDF ingestion foundation — no prerequisites"
+  - wave: 2
+    stories: ["1.2"]
+    note: "Text processing pipeline depends on Story 1.1"
+  - wave: 3
+    stories: ["1.3"]
+    note: "Vector database setup depends on Story 1.2"
+  - wave: 4
+    stories: ["1.4"]
+    note: "RAG search depends on Story 1.3"
+  - wave: 5
+    stories: ["1.5"]
+    note: "Answer generation depends on Story 1.4"
+  - wave: 6
+    stories: ["1.6"]
+    note: "Web UI depends on Story 1.5"
+  - wave: 7
+    stories: ["1.7"]
+    note: "System integration depends on Story 1.6"
+
+notes:
+  - All stories are strictly sequential for a solo developer (1 developer can only work on 1 story at a time)
+  - Wave numbers correspond to implementation order (1 → 2 → 3 → 4 → 5 → 6 → 7)
+  - Typical duration: 3-5 days per story (21-35 days total)
+  - Total waves: 7 (each story in its own wave due to strict sequential dependencies)
