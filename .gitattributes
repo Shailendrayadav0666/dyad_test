@@ -1,0 +1,8 @@
+# === AI-PDLC — auto-managed (do not edit by hand) ===
+# 'merge=union' is a BUILT-IN git driver — no install required, no hooks.
+# It concatenates both sides of any conflicting hunk in the listed files,
+# eliminating merge conflicts on append-only artifacts like aipdlc-docs/audit.md.
+
+aipdlc-docs/audit.md merge=union
+aipdlc-docs/aipdlc-state.md merge=union
+# === end AI-PDLC ===
