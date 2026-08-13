@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
 import UploadSection from './components/UploadSection'
 import ChatSection from './components/ChatSection'
+import ThemeToggle from './components/ThemeToggle'
+import { useTheme } from './hooks/useTheme'
 import { getStatus } from './api/client'
 
 export default function App() {
   const [sessionId, setSessionId] = useState(null)
   const [booting, setBooting] = useState(true)
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     // Prevent browser opening dropped files as a new tab
@@ -58,6 +61,7 @@ export default function App() {
             <p>Upload your course materials and ask questions</p>
           </div>
         </div>
+        <ThemeToggle theme={theme} onToggle={toggleTheme} />
       </header>
 
       <main className="app-main">

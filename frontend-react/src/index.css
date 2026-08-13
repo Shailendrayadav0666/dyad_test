@@ -25,21 +25,19 @@
   --shadow-md: 0 4px 14px rgba(0,0,0,.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary:     #818cf8;
-    --primary-h:   #6366f1;
-    --primary-a:   rgba(129,140,248,.12);
+:root[data-theme="dark"] {
+  --primary:     #818cf8;
+  --primary-h:   #6366f1;
+  --primary-a:   rgba(129,140,248,.12);
 
-    --bg:          #0f172a;
-    --surface:     #1e293b;
-    --surface-2:   #263344;
-    --border:      #334155;
+  --bg:          #0f172a;
+  --surface:     #1e293b;
+  --surface-2:   #263344;
+  --border:      #334155;
 
-    --text:        #f1f5f9;
-    --text-muted:  #94a3b8;
-    --text-subtle: #64748b;
-  }
+  --text:        #f1f5f9;
+  --text-muted:  #94a3b8;
+  --text-subtle: #64748b;
 }
 
 /* ── Reset ───────────────────────────────────────────────── */
@@ -75,6 +73,10 @@ textarea { font-family: inherit; }
 
 /* ── Header ──────────────────────────────────────────────── */
 .app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
   padding: 18px 0 16px;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
@@ -83,6 +85,15 @@ textarea { font-family: inherit; }
   display: flex;
   align-items: center;
   gap: 14px;
+}
+
+/* ── Theme toggle ────────────────────────────────────────── */
+.theme-toggle {
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
 }
 .brand-icon { font-size: 2rem; line-height: 1; }
 .header-brand h1 {

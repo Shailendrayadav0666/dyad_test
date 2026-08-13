@@ -1,0 +1,29 @@
+
+> rag-exam-prep@1.0.0 test
+> vitest run --coverage
+
+[2m7:56:39 PM[22m [33m[1m[vite][22m[39m [33mwarning: `esbuild` option was specified by "vite:react-babel" plugin. This option is deprecated, please use `oxc` instead.[39m
+[2m7:56:39 PM[22m [33m[1m[vite][22m[39m [33mwarning: `optimizeDeps.esbuildOptions` option was specified by "vite:react-babel" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.[39m
+[33mBoth esbuild and oxc options were set. oxc options will be used and esbuild options will be ignored.[39m The following esbuild options were set: `{ jsx: 'automatic', jsxImportSource: undefined }`
+
+ RUN  v4.1.10 C:/Users/shailendra.yadav/Desktop/projects/rag-pdlc/frontend-react
+      Coverage enabled with v8
+
+
+ Test Files  2 passed (2)
+      Tests  6 passed (6)
+   Start at  19:56:39
+   Duration  21.29s (transform 222ms, setup 5.12s, import 805ms, tests 156ms, environment 28.19s)
+
+ % Coverage report from v8
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------|---------|----------|---------|---------|-------------------
+------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 11/11 )
+Branches     : 100% ( 8/8 )
+Functions    : 100% ( 5/5 )
+Lines        : 100% ( 10/10 )
+================================================================================
