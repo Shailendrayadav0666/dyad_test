@@ -1,0 +1,12 @@
+version: 1
+generated_at: 2026-08-13
+team_size: 1
+
+shared_files: []
+
+stories:
+  - id: "1.1"
+    title: Global Light/Dark Theme Toggle
+    jira: AT-794
+    requires: []
+    enables: []
