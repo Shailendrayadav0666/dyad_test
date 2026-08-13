@@ -163,6 +163,102 @@
 
 ---
 
+## dev-implement — Story Selection
+**Timestamp**: 2026-08-13T14:21:53Z
+**User Email**: shailendra.yadav@3pillarglobal.com
+**User Input**: "AT-794" then "yes" (confirmed implement)
+**JIRA TICKET**: "[AT-794](https://3pillarglobal-demo.atlassian.net/browse/AT-794)"
+**Epic Link**: "[AT-793](https://3pillarglobal-demo.atlassian.net/browse/AT-793)"
+**AI-PDLC VERSION**: "2.3"
+**AI Response**: "Doability Gate passed (requires: none). Story AT-794 moved 🟢 Ready for Development → 🔵 In Development (Jira + tracker, verified). Parent Epic AT-793 moved to In Development (first story, verified). Assignee set to shailendra.yadav@3pillarglobal.com (accountId 712020:d672ab23-9483-46ba-ba19-072282f97d12), verified."
+**Context**: dev-implement, Story Selection
+
+---
+
+## dev-implement — Story Branch Checkpoint
+**Timestamp**: 2026-08-13T14:22:30Z
+**User Email**: shailendra.yadav@3pillarglobal.com
+**User Input**: "(automatic — no unmerged prerequisites)"
+**JIRA TICKET**: "[AT-794](https://3pillarglobal-demo.atlassian.net/browse/AT-794)"
+**Epic Link**: "[AT-793](https://3pillarglobal-demo.atlassian.net/browse/AT-793)"
+**AI-PDLC VERSION**: "2.3"
+**AI Response**: "Refreshed epic/AT-793-light-dark-theme-toggle (fast-forwarded), cut story/1.1-global-light-dark-theme-toggle from it. Story has no requires — no dependency-merge check needed."
+**Context**: dev-implement, Story Branch checkpoint
+
+---
+
+## dev-implement — Baseline Regression Run
+**Timestamp**: 2026-08-13T14:22:47Z
+**User Email**: shailendra.yadav@3pillarglobal.com
+**User Input**: "(automatic — mandatory pre-code baseline check)"
+**JIRA TICKET**: "[AT-794](https://3pillarglobal-demo.atlassian.net/browse/AT-794)"
+**Epic Link**: "[AT-793](https://3pillarglobal-demo.atlassian.net/browse/AT-793)"
+**AI-PDLC VERSION**: "2.3"
+**AI Response**: "Checked for an existing test suite (no test files, no test script/deps in either backend or frontend-react) — confirmed NO test suite exists in this repo, consistent with code-quality-assessment.md. Recorded explicitly in baseline-regression.log per the no-suite exception. Post-implementation gate will cover only this story's new tests."
+**Context**: dev-implement, Baseline Regression (Step 1.5 Item 4.5)
+
+---
+
+## Code Generation Part 1 — Plan Presented (GATE 2 prompt)
+**Timestamp**: 2026-08-13T14:23:19Z
+**User Email**: shailendra.yadav@3pillarglobal.com
+**User Input**: "(prompt presented)"
+**JIRA TICKET**: "[AT-794](https://3pillarglobal-demo.atlassian.net/browse/AT-794)"
+**Epic Link**: "[AT-793](https://3pillarglobal-demo.atlassian.net/browse/AT-793)"
+**AI-PDLC VERSION**: "2.3"
+**AI Response**: "Presented story-1.1-plan.md for approval — 6 steps, grounded in stories.md/requirements.md, reusing existing CSS-variable theming (index.css already has a prefers-color-scheme dark block to re-key to a manual data-theme attribute). Trace completeness self-check passed (8/8 REQ-IDs, all ACs covered)."
+**Context**: Code Generation Part 1, GATE 2 prompt
+
+---
+
+## Code Generation Part 1 — GATE 2 Plan Approved (Story 1.1)
+**Timestamp**: 2026-08-13T14:24:20Z
+**User Email**: shailendra.yadav@3pillarglobal.com
+**User Input**: "approve"
+**JIRA TICKET**: "[AT-794](https://3pillarglobal-demo.atlassian.net/browse/AT-794)"
+**Epic Link**: "[AT-793](https://3pillarglobal-demo.atlassian.net/browse/AT-793)"
+**AI-PDLC VERSION**: "2.3"
+**AI Response**: "Plan approved. Proceeding to Part 2 — Generation."
+**Context**: Code Generation Part 1, GATE 2
+
+---
+
+## Code Generation Part 2 — Implementation + Unit Test & Coverage Gate
+**Timestamp**: 2026-08-13T14:27:31Z
+**User Email**: shailendra.yadav@3pillarglobal.com
+**User Input**: "(automatic — plan execution)"
+**JIRA TICKET**: "[AT-794](https://3pillarglobal-demo.atlassian.net/browse/AT-794)"
+**Epic Link**: "[AT-793](https://3pillarglobal-demo.atlassian.net/browse/AT-793)"
+**AI-PDLC VERSION**: "2.3"
+**AI Response**: "Implemented all 6 plan steps: re-keyed index.css dark tokens to :root[data-theme=dark]; added useTheme.js hook (light default, no persistence); added ThemeToggle.jsx (sun/moon icon button); wired both into App.jsx header; added header-layout + .theme-toggle CSS. Added test toolchain (vitest, @testing-library/react, @testing-library/jest-dom, jsdom, @vitest/coverage-v8) — none existed before. Wrote useTheme.test.jsx (3 tests) and ThemeToggle.test.jsx (3 tests). Ran `npm test`: 6/6 passing, coverage 100% statements/branches/functions/lines on the two new files (gate: >=90%, met). Evidence saved to aipdlc-docs/construction/code/unit-test-evidence/story-1.1/ (unit-test-run.log, coverage-report.lcov, coverage-report.json, evidence-manifest.md). Full Regression Gate: re-ran the (only) test suite — no repo-wide baseline existed (0 pre-existing tests), so no NEW failures possible; full-regression.log matches unit-test-run.log. Diff against baseline-regression.log clean."
+**Context**: Code Generation Part 2, Unit Test & Coverage Gate + Full Regression Gate
+
+---
+
+## Auto Code Review — Story 1.1
+**Timestamp**: 2026-08-13T14:28:03Z
+**User Email**: shailendra.yadav@3pillarglobal.com
+**User Input**: "(automatic — auto-triggered after code generation)"
+**JIRA TICKET**: "[AT-794](https://3pillarglobal-demo.atlassian.net/browse/AT-794)"
+**Epic Link**: "[AT-793](https://3pillarglobal-demo.atlassian.net/browse/AT-793)"
+**AI-PDLC VERSION**: "2.3"
+**AI Response**: "Reviewed story-1.1-code-review-v1.md — all 6 ACs and all 8 mapped requirements verified Met against the code at HEAD. Reused dev-implement's test/coverage evidence (6/6 passing, 100% coverage) without re-running. Findings: 0 Blocker, 0 High. Verdict: Clean. Story stays 🔵 In Development (Code Review does not change status)."
+**Context**: Post-Code-Generation Automation, Section A Auto Code Review
+
+---
+
+## Review Decision — GATE 3 Approved & Continue (Story 1.1)
+**Timestamp**: 2026-08-13T14:28:56Z
+**User Email**: shailendra.yadav@3pillarglobal.com
+**User Input**: "Approve & continue"
+**JIRA TICKET**: "[AT-794](https://3pillarglobal-demo.atlassian.net/browse/AT-794)"
+**Epic Link**: "[AT-793](https://3pillarglobal-demo.atlassian.net/browse/AT-793)"
+**AI-PDLC VERSION**: "2.3"
+**AI Response**: "Proceeding to commit, push to epic/AT-793-light-dark-theme-toggle, and raise the story PR."
+**Context**: Post-Code-Generation Automation, Section B Review Decision Gate
+
+---
+
 ## Reverse Engineering - User Approval
 **Timestamp**: 2026-08-13T13:58:43Z
 **User Email**: shailendra.yadav@3pillarglobal.com

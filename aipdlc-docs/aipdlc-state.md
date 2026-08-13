@@ -37,7 +37,7 @@
 ## Story Tracker
 | Story ID | Title | Requires | Jira | Status | PR | Merged | Start | End | Recorded |
 |---|---|---|---|---|---|---|---|---|---|
-| 1.1 | Global Light/Dark Theme Toggle | none | AT-794 | 🟢 Ready for Development | — | — | | | 2026-08-13T14:12:49Z |
+| 1.1 | Global Light/Dark Theme Toggle | none | AT-794 | 🔵 In Development | — | — | 2026-08-13 | | 2026-08-13T14:21:53Z |
 
 ## Dependency Graph
 
